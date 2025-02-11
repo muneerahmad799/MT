@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: MT-frontend
+  name: mt-frontend
   namespace: mt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: MT-frontend
+      app: mt-frontend
   template:
     metadata:
       labels:
-        app: MT-frontend
+        app: mt-frontend
     spec:
       containers:
-      - name: MT-frontend
+      - name: mt-frontend
         image: muneerahmad799/frontend:33505d2
         ports:
         - containerPort: 80
