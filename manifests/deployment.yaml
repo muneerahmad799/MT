@@ -1,0 +1,21 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: MT-frontend
+  namespace: MT
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: MT-frontend
+  template:
+    metadata:
+      labels:
+        app: MT-frontend
+    spec:
+      containers:
+      - name: MT-frontend
+        image: muneerahmad799/frontend:33505d2
+        ports:
+        - containerPort: 80
