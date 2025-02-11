@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mt-frontend
-        image: muneerahmad799/frontend:33505d2
+        image: thoba/todo-list-app:latest
         ports:
         - containerPort: 80
